@@ -1,0 +1,46 @@
+---
+title: "The Step-by-Step Guide to Screening Automation"
+description: "A practical guide to implementing AI automated screening in your recruitment pipeline."
+date: "2024-06-18"
+category: "HR Tech"
+author: "Sarah Johnson"
+readTime: "7 min"
+---
+
+Implementing AI in your hiring pipeline sounds daunting, but it doesn't have to be. In this guide, we'll walk through the practical steps to integrate Hirel AI's automated screening into your existing workflows without disrupting your team.
+
+## Step 1: Define Your Rubrics
+
+Before the AI can evaluate a candidate, it needs to know what success looks like. The best rubrics are specific and behavioral.
+
+Instead of: "Needs to be good at Python."
+Use: "Can explain the difference between a list and a tuple, and knows when to use a generator for memory efficiency."
+
+Hirel AI allows you to input these directly as plain text. The system automatically converts them into evaluation criteria for the interviewing agent.
+
+## Step 2: Configure the ATS Integration
+
+If you use Greenhouse or Lever, this step takes about five minutes. 
+
+You'll map the "Initial Screen" stage in your ATS to trigger a Hirel AI interview invitation. When a candidate's application is moved to this stage, they instantly receive a customized email with a link to their interview session.
+
+```javascript
+// Example webhook payload you might configure
+{
+  "event": "candidate_stage_change",
+  "candidate_name": "Jane Doe",
+  "candidate_email": "jane@example.com",
+  "new_stage": "AI Technical Screen",
+  "job_id": "REQ-1042"
+}
+```
+
+## Step 3: Set Your Thresholds
+
+Not every candidate needs human review. You can configure Hirel to automatically advance candidates who score above an 85% to the "In-Person Interview" stage, while notifying the hiring manager to review anyone scoring between 70-85%.
+
+This automation alone saves recruitment coordinators hours of manual data entry and status updating.
+
+## Conclusion
+
+Automated screening isn't about removing humans from hiring; it's about reserving human energy for the parts of the process that truly require it—like selling the candidate on your company culture and making the final hiring decision.
