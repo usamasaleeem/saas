@@ -19,14 +19,14 @@ function VoiceWaveformMock() {
     <div className="w-full h-full bg-gradient-to-br from-zinc-950 to-zinc-900 rounded-2xl p-6 flex flex-col justify-between border border-white/5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.04)]">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-emerald-400" />
           <span className="text-xs font-medium text-white/70 tracking-wide">Live Interview</span>
         </div>
         <span className="text-[10px] font-mono text-white/40">04:32</span>
       </div>
       <div className="flex-1 flex items-center justify-center gap-1">
         {[2,4,6,8,10,8,6,10,12,8,6,4,6,8,10,14,10,8,6,4,2,4,6,8,6,4,2].map((h, i) => (
-          <div key={i} className="w-1 rounded-full bg-gradient-to-t from-indigo-600 to-purple-400 animate-pulse" style={{ height: `${h * 3}px`, animationDelay: `${i * 60}ms`, animationDuration: `${800 + i * 40}ms` }} />
+          <div key={i} className="w-1 rounded-full bg-gradient-to-t from-indigo-600 to-purple-400" style={{ height: `${h * 3}px` }} />
         ))}
       </div>
       <div className="mt-4 bg-white/5 rounded-xl p-3 border border-white/5">

@@ -45,7 +45,7 @@ export function Navbar() {
             <Image
               src="/hirelai.svg" // your logo in /public
               alt="Hirel AI Logo"
-              width={120}
+              width={180}
               height={32}
               className="object-contain transition-opacity group-hover:opacity-80"
               priority

@@ -112,7 +112,7 @@ export function Hero() {
                   <div className="w-3 h-3 rounded-full bg-emerald-400/80" />
                 </div>
                 <div className="text-[11px] text-muted-foreground font-medium flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
                   Live Interview Session
                 </div>
                 <div className="w-16" /> {/* spacer for centering */}

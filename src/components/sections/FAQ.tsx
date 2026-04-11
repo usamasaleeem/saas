@@ -4,7 +4,6 @@ import { useState } from "react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const FAQS = [
   {
@@ -47,29 +46,22 @@ export function FAQ() {
           {FAQS.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
-              <FadeIn key={i} delay={i * 0.1}>
+              <FadeIn key={i}>
                 <div className="mb-4 border border-border rounded-2xl overflow-hidden bg-muted/10">
                   <button
                     className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-muted/30 transition-colors"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
                   >
                     <span className="text-lg font-semibold pr-8">{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-primary" : "text-muted-foreground"}`} />
+                    <ChevronDown className={`w-5 h-5 flex-shrink-0 ${isOpen ? "rotate-180 text-primary" : "text-muted-foreground"}`} />
                   </button>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      >
-                        <div className="px-6 pb-5 pt-1 text-muted-foreground leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {isOpen && (
+                    <div>
+                      <div className="px-6 pb-5 pt-1 text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             );

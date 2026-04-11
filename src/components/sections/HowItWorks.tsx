@@ -38,7 +38,7 @@ export function HowItWorks() {
       mockUI: (
         <div className="flex items-center gap-4 h-12 relative z-10">
           <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
-            <div className="w-3 h-3 rounded-full bg-purple-500 animate-pulse" />
+            <div className="w-3 h-3 rounded-full bg-purple-500" />
           </div>
           <div className="flex gap-1 h-5 items-end">
             {[40, 70, 30, 80, 50, 90, 60, 40].map((h, i) => (

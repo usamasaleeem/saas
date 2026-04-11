@@ -15,7 +15,7 @@ export function FeaturesBento() {
         <div className="mt-8 relative h-32 rounded-xl overflow-hidden bg-gradient-to-br from-indigo-500/5 to-purple-500/5 border border-indigo-500/10 flex items-center justify-center group-hover:border-indigo-500/30 transition-colors">
           <div className="flex gap-2 items-center z-10">
             {[1, 2, 3, 4, 3, 2, 1].map((h, i) => (
-              <div key={i} className="w-2 bg-indigo-500/50 group-hover:bg-indigo-500 rounded-full animate-pulse transition-colors" style={{ height: `${h * 12}px`, animationDelay: `${i * 100}ms` }} />
+              <div key={i} className="w-2 bg-indigo-500/50 rounded-full" style={{ height: `${h * 12}px` }} />
             ))}
             <div className="ml-4 px-3 py-1 bg-background/80 backdrop-blur rounded-full text-xs font-medium border border-border shadow-sm text-foreground">Listening to Candidate...</div>
           </div>

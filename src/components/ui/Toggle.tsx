@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 
 export interface ToggleProps {
   checked: boolean;
@@ -16,7 +15,7 @@ export function Toggle({ checked, onChange, className, leftLabel, rightLabel }: 
   return (
     <div className={cn("flex items-center space-x-3", className)}>
       {leftLabel && (
-        <span className={cn("text-sm font-medium transition-colors", !checked ? "text-foreground" : "text-muted-foreground")}>
+        <span className={cn("text-sm font-medium", !checked ? "text-foreground" : "text-muted-foreground")}>
           {leftLabel}
         </span>
       )}
@@ -26,18 +25,17 @@ export function Toggle({ checked, onChange, className, leftLabel, rightLabel }: 
         aria-checked={checked}
         onClick={() => onChange(!checked)}
         className={cn(
-          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
           checked ? "bg-primary" : "bg-muted-foreground/30"
         )}
       >
-        <motion.span
-          initial={false}
-          animate={{ x: checked ? 20 : 0 }}
+        <span
           className="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg ring-0"
+          style={{ transform: checked ? "translateX(20px)" : "translateX(0px)" }}
         />
       </button>
       {rightLabel && (
-        <span className={cn("text-sm font-medium transition-colors", checked ? "text-foreground" : "text-muted-foreground")}>
+        <span className={cn("text-sm font-medium", checked ? "text-foreground" : "text-muted-foreground")}>
           {rightLabel}
         </span>
       )}

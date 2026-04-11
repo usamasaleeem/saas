@@ -1,12 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Mic, User, Activity, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 export function HeroDemo() {
   return (
-    <FadeIn delay={0.4} className="w-full max-w-4xl">
+    <FadeIn className="w-full max-w-4xl">
       <div className="relative rounded-2xl border bg-card/50 backdrop-blur-md shadow-2xl overflow-hidden glass p-4 md:p-8">
         
         {/* Top Bar Navigation (Mock) */}
@@ -17,7 +14,7 @@ export function HeroDemo() {
             <div className="w-3 h-3 rounded-full bg-green-400" />
           </div>
           <div className="text-sm font-medium text-muted-foreground flex items-center">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse mr-2" />
+            <span className="w-2 h-2 rounded-full bg-red-500 mr-2" />
             Live Interview • Software Engineer
           </div>
         </div>
@@ -32,21 +29,16 @@ export function HeroDemo() {
               
               <div className="flex flex-col items-center space-y-6 z-10">
                 <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center relative">
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                    className="absolute inset-0 rounded-full border-2 border-primary/30"
-                  />
+                  <div className="absolute inset-0 rounded-full border-2 border-primary/30" />
                   <Mic className="w-10 h-10 text-primary" />
                 </div>
                 
                 <div className="flex space-x-1 items-center">
                    {[...Array(9)].map((_, i) => (
-                     <motion.div
+                     <div
                        key={i}
-                       animate={{ height: [10, Math.random() * 30 + 20, 10] }}
-                       transition={{ repeat: Infinity, duration: Math.random() * 0.5 + 0.5, ease: "easeInOut" }}
                        className="w-1.5 bg-primary/80 rounded-full"
+                       style={{ height: `${Math.random() * 30 + 10}px` }}
                      />
                    ))}
                 </div>
@@ -83,7 +75,7 @@ export function HeroDemo() {
                   <span className="font-medium text-green-600">High</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-1.5">
-                  <motion.div initial={{ width: 0 }} animate={{ width: "85%" }} className="bg-green-500 h-1.5 rounded-full" transition={{ duration: 1, delay: 1 }} />
+                  <div className="bg-green-500 h-1.5 rounded-full" style={{ width: "85%" }} />
                 </div>
               </div>
 
@@ -93,7 +85,7 @@ export function HeroDemo() {
                   <span className="font-medium">Excellent</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-1.5">
-                  <motion.div initial={{ width: 0 }} animate={{ width: "92%" }} className="bg-primary h-1.5 rounded-full" transition={{ duration: 1, delay: 1.2 }} />
+                  <div className="bg-primary h-1.5 rounded-full" style={{ width: "92%" }} />
                 </div>
               </div>
               
@@ -103,7 +95,7 @@ export function HeroDemo() {
                   <span className="font-medium">Clear</span>
                 </div>
                 <div className="w-full bg-muted rounded-full h-1.5">
-                  <motion.div initial={{ width: 0 }} animate={{ width: "78%" }} className="bg-primary/70 h-1.5 rounded-full" transition={{ duration: 1, delay: 1.4 }} />
+                  <div className="bg-primary/70 h-1.5 rounded-full" style={{ width: "78%" }} />
                 </div>
               </div>
 
