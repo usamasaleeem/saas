@@ -12,6 +12,15 @@ const nextConfig: NextConfig = {
     maxInactiveAge: 15 * 1000, // 15 seconds (default is 60s)
     pagesBufferLength: 2,      // 2 pages (default is 2)
   },
+  async redirects() {
+    return [
+      {
+        source: "/login",
+        destination: "https://app.hirelai.com/login",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

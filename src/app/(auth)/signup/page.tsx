@@ -117,7 +117,7 @@ export default function SignupPage() {
 
       <p className="text-center text-sm text-muted-foreground">
         Already have an account?{" "}
-        <Link href="/login" className="font-semibold text-primary hover:underline">
+        <Link href="https://app.hirelai.com/login" className="font-semibold text-primary hover:underline">
           Sign in
         </Link>
       </p>

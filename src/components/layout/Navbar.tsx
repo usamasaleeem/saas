@@ -84,7 +84,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <Link href="https://app.hirelai.com/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Log in
             </Link>
             <Link href="/book-demo">

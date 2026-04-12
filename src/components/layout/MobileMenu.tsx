@@ -63,7 +63,7 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
               })}
 
               <div className="pt-6 border-t mt-6 flex flex-col space-y-4">
-                <Link href="/login" onClick={onClose} className="w-full">
+                <Link href="https://app.hirelai.com/login" onClick={onClose} className="w-full">
                   <Button variant="outline" className="w-full justify-center" size="lg">
                     Log In
                   </Button>
