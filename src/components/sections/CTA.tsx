@@ -20,15 +20,15 @@ export function CTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-md mx-auto">
-            <Link href="/signup" className="w-full">
+            <Link href="/book-demo" className="w-full">
               <Button size="lg" className="w-full text-base py-6 shadow-lg shadow-primary/25">
-                Start Your Free Trial
+                Book a Personalized Demo
               </Button>
             </Link>
           </div>
           
           <p className="text-sm text-muted-foreground pt-4">
-            14-day free trial. No credit card required.
+            See Hirel AI in action and get all your questions answered.
           </p>
         </FadeIn>
       </div>

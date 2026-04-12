@@ -29,6 +29,18 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={cn(
@@ -75,8 +87,8 @@ export function Navbar() {
             <Link href="/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Log in
             </Link>
-            <Link href="/signup">
-              <Button>Start Free Trial</Button>
+            <Link href="/book-demo">
+              <Button>Book a Demo</Button>
             </Link>
           </div>
 

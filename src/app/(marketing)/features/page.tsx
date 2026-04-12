@@ -234,9 +234,9 @@ export default function FeaturesPage() {
               </p>
             </StaggerItem>
             <StaggerItem className="flex flex-col sm:flex-row items-center gap-4">
-              <Link href="/signup">
+              <Link href="/book-demo">
                 <Button size="lg" className="h-13 px-8 text-base font-semibold group">
-                  Start Free Trial
+                  Book a Demo
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -298,8 +298,8 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
 
-                  <Link href="/signup" className="inline-flex items-center text-primary font-semibold group text-sm hover:underline underline-offset-4">
-                    Try this feature free <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <Link href="/book-demo" className="inline-flex items-center text-primary font-semibold group text-sm hover:underline underline-offset-4">
+                    Book a Demo <ArrowRight className="ml-1.5 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </FadeIn>
                 
@@ -337,15 +337,10 @@ export default function FeaturesPage() {
                 Deploy your first AI interview in under 5 minutes. See why thousands of hiring teams made the switch.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="/signup">
-                  <Button size="lg" className="h-14 px-10 text-base font-semibold group">
-                    Start Hiring for Free
+                <Link href="/book-demo">
+                  <Button size="lg" className="h-14 px-10 text-base font-semibold group shadow-lg shadow-primary/25">
+                    Book a Personalized Demo
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button size="lg" variant="outline" className="h-14 px-10 text-base font-medium">
-                    Talk to Sales
                   </Button>
                 </Link>
               </div>

@@ -45,9 +45,9 @@ export function Hero() {
           {/* CTAs */}
           <FadeIn delay={0.2}>
             <div className="flex flex-col sm:flex-row items-center gap-3 mb-8">
-              <Link href="/signup">
+              <Link href="/book-demo">
                 <Button size="lg" className="h-13 px-8 text-base font-semibold group">
-                  Start Free Trial
+                  Book a Demo
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

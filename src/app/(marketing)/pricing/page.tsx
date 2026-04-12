@@ -7,7 +7,7 @@ import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button";
 import { Toggle } from "@/components/ui/Toggle";
 import { Check, ArrowRight, Shield, Zap, HelpCircle, ChevronDown, Sparkles, Building2, Headphones } from "lucide-react";
-
+import Link from 'next/link';
 const TIERS = [
   {
     name: "Starter",
@@ -22,7 +22,7 @@ const TIERS = [
       "3 active job posting",
       "Basic analytics dashboard",
     ],
-    cta: "Start Free Trial",
+    cta: "Book a Demo",
     ctaVariant: "outline" as const,
     popular: false,
     icon: <Zap className="w-5 h-5" />,
@@ -43,7 +43,7 @@ const TIERS = [
       "Advanced analytics & reports",
       "Team collaboration tools",
     ],
-    cta: "Start Free Trial",
+    cta: "Book a Demo",
     ctaVariant: "primary" as const,
     popular: true,
     icon: <Sparkles className="w-5 h-5" />,
@@ -64,7 +64,7 @@ const TIERS = [
       "On-premise deployment option",
       "Volume-based pricing",
     ],
-    cta: "Contact Sales",
+    cta: "Book a Demo",
     ctaVariant: "outline" as const,
     popular: false,
     icon: <Building2 className="w-5 h-5" />,
@@ -227,17 +227,19 @@ export default function PricingPage() {
                     </CardContent>
 
                     <CardFooter className="p-8 pt-0 mt-auto">
-                      <Button
-                        variant={tier.popular ? "primary" : "outline"}
-                        className={`w-full h-12 text-base font-semibold group ${tier.popular
-                          ? "shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow"
-                          : ""
-                          }`}
-                        size="lg"
-                      >
-                        {tier.cta}
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                      <Link href="/book-demo" className="w-full">
+                        <Button
+                          variant={tier.popular ? "primary" : "outline"}
+                          className={`w-full h-12 text-base font-semibold group ${tier.popular
+                            ? "shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow"
+                            : ""
+                            }`}
+                          size="lg"
+                        >
+                          {tier.cta}
+                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </Link>
                     </CardFooter>
                   </Card>
                 </div>
@@ -297,10 +299,12 @@ export default function PricingPage() {
                 </ul>
               </div>
               <div className="flex-shrink-0">
-                <Button size="lg" className="h-14 px-10 text-base font-semibold group">
-                  Talk to Sales
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link href="/book-demo">
+                  <Button size="lg" className="h-14 px-10 text-base font-semibold group">
+                    Talk to Sales
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </FadeIn>
@@ -346,16 +350,15 @@ export default function PricingPage() {
                 Ready to hire <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">10x faster?</span>
               </h2>
               <p className="text-xl text-muted-foreground font-medium mb-10 max-w-xl mx-auto leading-relaxed">
-                Join thousands of teams already using Hirel AI. Start your 14-day free trial — no credit card required.
+                Join thousands of teams already using Hirel AI. Let us show you how to transform your hiring workflow.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg" className="h-14 px-10 text-base font-semibold group">
-                  Start Hiring for Free
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button size="lg" variant="outline" className="h-14 px-10 text-base font-medium">
-                  Book a Demo
-                </Button>
+                <Link href="/book-demo">
+                  <Button size="lg" className="h-14 px-10 text-base font-semibold group shadow-lg shadow-primary/25">
+                    Book a Personalized Demo
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
