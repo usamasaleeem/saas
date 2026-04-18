@@ -10,9 +10,11 @@ declare global {
 
 export function CalEmbed() {
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     let isMounted = true;
 
-    (function (C, A, L) {
+    /* eslint-disable prefer-const, @typescript-eslint/no-explicit-any, prefer-rest-params */
+    (function (C: any, A: any, L: any) {
       let p = function (a: any, ar: any) {
         a.q.push(ar);
       };
