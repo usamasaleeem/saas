@@ -12,7 +12,7 @@ export default function TermsPage() {
         <div className="prose prose-lg dark:prose-invert">
           <h1>Terms of Service</h1>
           <p className="text-muted-foreground mb-8">Last updated: May 1, 2024</p>
-          
+
           <p>
             Please read these terms and conditions carefully before using Our Service.
           </p>
@@ -43,11 +43,13 @@ export default function TermsPage() {
           <p>
             In no event shall Hirel AI or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Hirel AI's website, even if Hirel AI or a Hirel AI authorized representative has been notified orally or in writing of the possibility of such damage.
           </p>
-          
+
           <h2>Contact Us</h2>
           <p>If you have any questions about these Terms, You can contact us:</p>
           <ul>
-            <li>By email: legal@hirelai.com</li>
+            <li>By email: <strong>info@hirelai.com</strong></li>
+            <li>By phone: <strong>+31 505 858585</strong></li>
+            <li>By mail: <strong>Hirel AI, I8 Islamabad Pakistan</strong></li>
           </ul>
         </div>
       </div>

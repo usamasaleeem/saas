@@ -25,9 +25,9 @@ const FOOTER_LINKS = {
     { name: "Status", href: "#" },
   ],
   Legal: [
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Privacy Policy", href: "/policy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/privacy#cookies" },
+    { name: "Refund Policy", href: "/refund-policy" },
   ],
 };
 
