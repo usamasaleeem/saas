@@ -96,7 +96,7 @@ export function Testimonials() {
                       ))}
                     </div>
                     <p className="text-foreground/80 leading-relaxed font-medium mb-8">
-                      "{t.quote}"
+                      &quot;{t.quote}&quot;
                     </p>
                   </div>
                   

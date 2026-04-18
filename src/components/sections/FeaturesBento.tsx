@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FadeIn } from "@/components/animations/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";

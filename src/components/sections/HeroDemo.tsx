@@ -1,4 +1,4 @@
-import { Mic, User, Activity, CheckCircle2 } from "lucide-react";
+import { Mic, Activity, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 export function HeroDemo() {
@@ -45,7 +45,7 @@ export function HeroDemo() {
               </div>
 
               <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium border flex items-center shadow-sm">
-                <span className="text-primary mr-1">Hirel AI</span> Interviewing "Alex Morgan"
+                <span className="text-primary mr-1">Hirel AI</span> Interviewing &quot;Alex Morgan&quot;
               </div>
             </div>
 
