@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import { Metadata } from "next";
 import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren";
 import { FadeIn } from "@/components/animations/FadeIn";

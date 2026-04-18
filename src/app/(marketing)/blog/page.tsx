@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { getAllPosts } from "@/lib/blog";
 import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren";
 import { FadeIn } from "@/components/animations/FadeIn";

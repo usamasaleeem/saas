@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars, @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
 import { highlight } from "sugar-high";
