@@ -9,21 +9,13 @@ const FOOTER_LINKS = {
   Product: [
     { name: "Features", href: "/features" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Integrations", href: "/features#integrations" },
-    { name: "Changelog", href: "/blog?category=changelog" },
   ],
   Company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/about#careers" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/book-a-demo" },
   ],
-  Resources: [
-    { name: "Community", href: "#" },
-    { name: "Help Center", href: "#" },
-    { name: "API Documentation", href: "#" },
-    { name: "Status", href: "#" },
-  ],
+ 
   Legal: [
     { name: "Privacy Policy", href: "/policy" },
     { name: "Terms of Service", href: "/terms" },

@@ -70,7 +70,7 @@ export function Hero() {
                     <div key={i} className="w-7 h-7 rounded-full border-2 border-background bg-gradient-to-br from-primary/40 to-purple-500/40" style={{ zIndex: 5 - i }} />
                   ))}
                 </div>
-                <span className="font-medium">10,000+ teams</span>
+                <span className="font-medium">100+ teams</span>
               </div>
 
               <div className="hidden sm:block w-px h-5 bg-border" />

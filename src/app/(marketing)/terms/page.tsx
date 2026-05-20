@@ -49,7 +49,7 @@ export default function TermsPage() {
           <p>If you have any questions about these Terms, You can contact us:</p>
           <ul>
             <li>By email: <strong>info@hirelai.com</strong></li>
-            <li>By phone: <strong>+31 505 858585</strong></li>
+            <li>By phone: <strong>+31 505 82855</strong></li>
             <li>By mail: <strong>Hirel AI, I8 Islamabad Pakistan</strong></li>
           </ul>
         </div>

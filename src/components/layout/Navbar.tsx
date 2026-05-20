@@ -10,6 +10,7 @@ import { MobileMenu } from "./MobileMenu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+
 const NAV_LINKS = [
   { name: "Features", href: "/features" },
   { name: "Pricing", href: "/pricing" },
@@ -34,11 +35,22 @@ export function Navbar() {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
     } else {
-      document.body.style.overflow = "unset";
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
     };
   }, [mobileMenuOpen]);
 
@@ -54,9 +66,8 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 group">
-
             <Image
-              src="/hirelai.svg" // your logo in /public
+              src="/hirelai.svg"
               alt="Hirel AI Logo"
               width={180}
               height={32}
@@ -87,6 +98,9 @@ export function Navbar() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link href="https://app.hirelai.com/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
               Log in
+            </Link>
+            <Link href="https://app.hirelai.com/signup" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              Register
             </Link>
             <Link href="/book-demo">
               <Button>Book a Demo</Button>
